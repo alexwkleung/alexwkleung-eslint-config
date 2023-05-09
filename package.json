@@ -1,7 +1,7 @@
 {
   "name": "alexwkleung-eslint-config",
   "version": "1.0.0",
-  "description": "My ESLint config",
+  "description": "alexwkleung ESLint config",
   "main": "",
   "scripts": {
     "eslint": "eslint .",
