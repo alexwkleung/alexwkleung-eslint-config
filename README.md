@@ -26,6 +26,21 @@ npm install eslint-plugin-react-hooks --save-dev
 npm install eslint-plugin-react-refresh --save-dev
 ```
 
+
+**Alternatively, use one-liner install:** 
+
+TypeScript
+
+```bash
+npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+```
+
+React
+
+```bash
+npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react-hooks eslint-plugin-react-refresh --save-dev
+```
+
 # Setup
 
 1. Create `.eslintrc.json`
