@@ -98,6 +98,11 @@ React:
 
 ```txt
 **/*.js
+node_modules
+dist
+out
+build
+.gitignore
 ```
 
 3. Add scripts to `package.json`
