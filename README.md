@@ -57,6 +57,9 @@ TypeScript:
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
+    "rules": {
+        "@typescript-eslint/explicit-function-return-type": "error"
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -85,7 +88,8 @@ React:
     },
     "plugins": ["react-refresh"],
     "rules": {
-        "react-refresh/only-export-components": "warn"
+        "react-refresh/only-export-components": "warn",
+        "@typescript-eslint/explicit-function-return-type": "error"
     }
 }
 ```
