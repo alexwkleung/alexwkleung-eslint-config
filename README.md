@@ -58,7 +58,8 @@ TypeScript:
         "plugin:@typescript-eslint/recommended"
     ],
     "rules": {
-        "@typescript-eslint/explicit-function-return-type": "error"
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/no-inferrable-types": "false"
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -89,7 +90,8 @@ React:
     "plugins": ["react-refresh"],
     "rules": {
         "react-refresh/only-export-components": "warn",
-        "@typescript-eslint/explicit-function-return-type": "error"
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "@typescript-eslint/no-inferrable-types": "false"
     }
 }
 ```
