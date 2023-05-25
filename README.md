@@ -57,11 +57,14 @@ TypeScript:
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
     ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "rules": {
         "@typescript-eslint/explicit-function-return-type": "error",
-        "@typescript-eslint/no-inferrable-types": "false"
+        "@typescript-eslint/no-inferrable-types": "off"
     },
-    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -91,7 +94,7 @@ React:
     "rules": {
         "react-refresh/only-export-components": "warn",
         "@typescript-eslint/explicit-function-return-type": "error",
-        "@typescript-eslint/no-inferrable-types": "false"
+        "@typescript-eslint/no-inferrable-types": "off"
     }
 }
 ```
