@@ -63,7 +63,8 @@ TypeScript:
     ],
     "rules": {
         "@typescript-eslint/explicit-function-return-type": "error",
-        "@typescript-eslint/no-inferrable-types": "off"
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "warn"
     },
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -94,7 +95,8 @@ React:
     "rules": {
         "react-refresh/only-export-components": "warn",
         "@typescript-eslint/explicit-function-return-type": "error",
-        "@typescript-eslint/no-inferrable-types": "off"
+        "@typescript-eslint/no-inferrable-types": "off",
+        "@typescript-eslint/no-explicit-any": "warn"
     }
 }
 ```
