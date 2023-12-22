@@ -163,7 +163,7 @@ build
 .gitignore
 ```
 
-3. Create `.prettierrc.json` (optional)
+3. Create `.prettierrc.json`
 
 ```json
 {
@@ -174,7 +174,20 @@ build
 }
 ```
 
-4. Add scripts to `package.json`
+4. Create `.prettierignore`
+
+```txt
+**/*.json
+**/*.
+**/*.md
+**/*.js
+out
+dist
+build
+node_modules
+```
+
+5. Add scripts to `package.json`
 
 ```json
 "scripts": {
@@ -183,7 +196,7 @@ build
 }
 ```
 
-5. Add these to VS Code `settings.json`
+6. Add these to VS Code `settings.json`
 
 ```json
 "editor.codeActionsOnSave": {
@@ -193,4 +206,4 @@ build
 "prettier.enable": true
 ```
 
-6. Recommended: Install ESLint, Prettier, and Error Lens extensions in VSCode.
+7. Recommended: Install ESLint, Prettier, and Error Lens extensions in VSCode.
