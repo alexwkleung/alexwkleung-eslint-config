@@ -1,6 +1,6 @@
 # eslint-config
 
-My ESLint config.
+ESLint config. 
 
 # Installation
 
@@ -18,6 +18,12 @@ npm install @typescript-eslint/eslint-plugin --save-dev
 npm install @typescript-eslint/parser --save-dev
 ```
 
+Install Prettier (optional)
+
+```bash
+npm install prettier eslint-plugin-prettier eslint-config-prettier
+```
+
 If you are using React, install React ESLint packages as well
 
 ```bash
@@ -26,13 +32,18 @@ npm install eslint-plugin-react-hooks --save-dev
 npm install eslint-plugin-react-refresh --save-dev
 ```
 
-
 **Alternatively, use one-liner install:** 
 
 TypeScript
 
 ```bash
 npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser --save-dev
+```
+
+TypeScript + Prettier
+
+```bash
+npm install eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser prettier eslint-plugin-prettier eslint-config-prettier --save-dev
 ```
 
 React
@@ -64,6 +75,41 @@ TypeScript:
         "files": ["*.ts", "*.mts", "*.d.ts"],
         "extends": [
             "plugin:@typescript-eslint/recommended"
+        ],
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "rules": {
+            "@typescript-eslint/explicit-function-return-type": "error",
+            "@typescript-eslint/no-inferrable-types": "off",
+            "@typescript-eslint/no-explicit-any": "warn"
+        }
+    }]
+}
+```
+
+TypeScript + Prettier:
+
+```json
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "overrides": [{
+        "files": ["*.ts", "*.mts", "*.d.ts"],
+        "extends": [
+            "plugin:@typescript-eslint/recommended",
+            "plugin:prettier/recommended",
+            "prettier"
         ],
         "parser": "@typescript-eslint/parser",
         "plugins": [
@@ -117,7 +163,18 @@ build
 .gitignore
 ```
 
-3. Add scripts to `package.json`
+3. Create `.prettierrc.json` (optional)
+
+```json
+{
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false
+}
+```
+
+4. Add scripts to `package.json`
 
 ```json
 "scripts": {
@@ -126,12 +183,14 @@ build
 }
 ```
 
-4. Add lint on save to VSCode `settings.json`
+5. Add these to VS Code `settings.json`
 
 ```json
 "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
-}
+    "source.fixAll.eslint": "always",
+    "editor.formatOnSave": "always"
+},
+"prettier.enable": true
 ```
 
-5. Recommended: Install ESLint and Error Lens extensions in VSCode.
+6. Recommended: Install ESLint, Prettier, and Error Lens extensions in VSCode.
