@@ -108,17 +108,20 @@ TypeScript + Prettier:
         "files": ["*.ts", "*.mts", "*.d.ts"],
         "extends": [
             "plugin:@typescript-eslint/recommended",
-            "plugin:prettier/recommended",
             "prettier"
         ],
         "parser": "@typescript-eslint/parser",
         "plugins": [
-            "@typescript-eslint"
+            "@typescript-eslint",
+            "eslint-plugin-prettier",
+            "prettier"
         ],
         "rules": {
             "@typescript-eslint/explicit-function-return-type": "error",
             "@typescript-eslint/no-inferrable-types": "off",
-            "@typescript-eslint/no-explicit-any": "warn"
+            "@typescript-eslint/no-explicit-any": "warn",
+            "@typescript-eslint/no-namespace": "off",
+            "prettier/prettier": "error"
         }
     }]
 }
