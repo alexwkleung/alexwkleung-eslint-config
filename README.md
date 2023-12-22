@@ -193,7 +193,8 @@ node_modules
 ```json
 "scripts": {
     "eslint": "eslint .",
-    "eslint:fix": "eslint . --fix"
+    "eslint:fix": "eslint . --fix",
+    "prettier": "prettier . --write"
 }
 ```
 
