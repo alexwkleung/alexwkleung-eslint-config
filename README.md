@@ -21,7 +21,7 @@ npm install @typescript-eslint/parser --save-dev
 Install Prettier (optional)
 
 ```bash
-npm install prettier eslint-plugin-prettier eslint-config-prettier
+npm install prettier eslint-plugin-prettier eslint-config-prettier --save-dev
 ```
 
 If you are using React, install React ESLint packages as well
